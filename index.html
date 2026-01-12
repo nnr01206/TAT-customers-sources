@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>來店資訊調查</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 選中時的樣式：藍色邊框與背景 */
+        input[type="radio"]:checked + div {
+            border-color: #2563eb;
+            background-color: #eff6ff;
+        }
+        /* 選中時顯示打勾圖示 */
+        input[type="radio"]:checked + div svg {
+            display: block;
+        }
+        .hidden-el { display: none; }
+    </style>
+</head>
+<body class="bg-gray-100 antialiased pb-12">
+
+    <div class="max-w-md mx-auto px-4 py-8">
+        <header class="text-center mb-10">
+            <h1 class="text-2xl font-black text-gray-800 tracking-tight">您好！歡迎光臨</h1>
+            <p class="text-gray-500 mt-2 text-sm font-medium">請協助我們填寫簡單資訊，幫助我們做得更好</p>
+        </header>
+
+        <form id="surveyForm" class="space-y-10">
+            
+            <section>
+                <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                    <span class="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs mr-2">1</span>
+                    您是透過什麼管道得知我們的？
+                </h3>
+                <div class="space-y-3">
+                    <label class="block cursor-pointer">
+                        <input type="radio" name="source" value="Google Maps" class="sr-only" required>
+                        <div class="flex items-center justify-between p-4 bg-white border-2 border-transparent rounded-2xl shadow-sm active:scale-[0.97] transition-all">
+                            <span class="text-gray-700 font-semibold">📍 Google 導航 / 地圖</span>
+                            <svg class="hidden w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
+                        </div>
+                    </label>
+                    <label class="block cursor-pointer">
+                        <input type="radio" name="source" value="Google Search" class="sr-only">
+                        <div class="flex items-center justify-between p-4 bg-white border-2 border-transparent rounded-2xl shadow-sm active:scale-[0.97] transition-all">
+                            <span class="text-gray-700 font-semibold">🔍 Google 關鍵字搜尋</span>
+                            <svg class="hidden w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
+                        </div>
+                    </label>
+                    <label class="block cursor-pointer">
+                        <input type="radio" name="source" value="Meta (FB/IG)" class="sr-only">
+                        <div class="flex items-center justify-between p-4 bg-white border-2 border-transparent rounded-2xl shadow-sm active:scale-[0.97] transition-all">
+                            <span class="text-gray-700 font-semibold">📱 Facebook / Instagram 廣告</span>
+                            <svg class="hidden w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
+                        </div>
+                    </label>
+                    <label class="block cursor-pointer">
+                        <input type="radio" name="source" value="EDM" class="sr-only">
+                        <div class="flex items-center justify-between p-4 bg-white border-2 border-transparent rounded-2xl shadow-sm active:scale-[0.97] transition-all">
+                            <span class="text-gray-700 font-semibold">📩 電子報 (EDM)</span>
+                            <svg class="hidden w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
+                        </div>
+                    </label>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                    <span class="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs mr-2">2</span>
+                    您今天想找哪一種商品？
+                </h3>
+                <div class="grid grid-cols-2 gap-3">
+                    <label class="cursor-pointer"><input type="radio" name="product" value="黑膠" class="sr-only" required><div class="p-4 bg-white border-2 border-transparent rounded-2xl shadow-sm text-center font-semibold text-gray-700 active:scale-95 transition-all">黑膠</div></label>
+                    <label class="cursor-pointer"><input type="radio" name="product" value="藍牙喇叭" class="sr-only"><div class="p-4 bg-white border-2 border-transparent rounded-2xl shadow-sm text-center font-semibold text-gray-700 active:scale-95 transition-all">藍牙喇叭</div></label>
+                    <label class="cursor-pointer"><input type="radio" name="product" value="書架式喇叭" class="sr-only"><div class="p-4 bg-white border-2 border-transparent rounded-2xl shadow-sm text-center font-semibold text-gray-700 active:scale-95 transition-all">書架式喇叭</div></label>
+                    <label class="cursor-pointer"><input type="radio" name="product" value="家庭劇院" class="sr-only"><div class="p-4 bg-white border-2 border-transparent rounded-2xl shadow-sm text-center font-semibold text-gray-700 active:scale-95 transition-all">家庭劇院</div></label>
+                    <label class="cursor-pointer"><input type="radio" name="product" value="擴大機" class="sr-only"><div class="p-4 bg-white border-2 border-transparent rounded-2xl shadow-sm text-center font-semibold text-gray-700 active:scale-95 transition-all">擴大機</div></label>
+                    <label class="cursor-pointer" id="other-trigger">
+                        <input type="radio" name="product" value="其他" class="sr-only">
+                        <div class="p-4 bg-white border-2 border-transparent rounded-2xl shadow-sm text-center font-semibold text-gray-700 active:scale-95 transition-all">其他</div>
+                    </label>
+                </div>
+                <div id="other-input-container" class="mt-3 hidden-el">
+                    <input type="text" id="other_product_text" placeholder="請輸入商品名稱..." class="w-full p-4 rounded-2xl border-none shadow-inner bg-white focus:ring-2 focus:ring-blue-500">
+                </div>
+            </section>
+
+            <button type="submit" id="submitBtn" class="w-full bg-blue-600 text-white text-xl font-bold py-5 rounded-2xl shadow-xl active:bg-blue-700 active:scale-[0.98] transition-all">
+                確認送出
+            </button>
+        </form>
+
+        <div id="successMsg" class="hidden-el text-center py-20">
+            <div class="text-7xl mb-6">🎉</div>
+            <h2 class="text-2xl font-bold text-gray-800">提交成功！</h2>
+            <p class="text-gray-500 mt-4">感謝您的協助，專員隨後為您服務。</p>
+            <button onclick="location.reload()" class="mt-8 text-blue-600 font-medium underline">重新填寫</button>
+        </div>
+    </div>
+
+    <script>
+        // 1. 處理「其他」選項的顯示邏輯
+        const productRadios = document.querySelectorAll('input[name="product"]');
+        const otherContainer = document.getElementById('other-input-container');
+        const otherInput = document.getElementById('other_product_text');
+
+        productRadios.forEach(radio => {
+            radio.addEventListener('change', () => {
+                if (radio.value === '其他') {
+                    otherContainer.classList.remove('hidden-el');
+                    otherInput.focus();
+                } else {
+                    otherContainer.classList.add('hidden-el');
+                }
+            });
+        });
+
+        // 2. 表單提交處理
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzNt-0EjqdvGKjZO4n6SyN-2To_gJl-DwZSASchYGQhwYHO2M0UyfZNDXENFdUaRLUH_A/exec';
+        const form = document.getElementById('surveyForm');
+        const btn = document.getElementById('submitBtn');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            btn.disabled = true;
+            btn.innerText = '正在傳送...';
+
+            const sourceVal = document.querySelector('input[name="source"]:checked').value;
+            const productVal = document.querySelector('input[name="product"]:checked').value;
+            
+            // 如果選其他，抓取輸入框文字
+            const finalProduct = (productVal === '其他') ? otherInput.value : productVal;
+
+            const payload = {
+                source: sourceVal,
+                product: finalProduct,
+                note: "" // 如果以後有加留言板可放這
+            };
+
+            fetch(scriptURL, { 
+                method: 'POST', 
+                mode: 'no-cors', // 為了繞過 GAS 的跨域問題
+                cache: 'no-cache',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            })
+            .then(() => {
+                form.classList.add('hidden-el');
+                document.getElementById('successMsg').classList.remove('hidden-el');
+                window.scrollTo(0, 0);
+            })
+            .catch(error => {
+                alert('抱歉，連線似乎有問題，請再試一次。');
+                btn.disabled = false;
+                btn.innerText = '確認送出';
+            });
+        });
+    </script>
+</body>
+</html>
