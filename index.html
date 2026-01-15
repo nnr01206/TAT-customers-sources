@@ -1,234 +1,483 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Argon TT 全台最低價促銷</title>
+
+<html lang="zh-Hant">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>TAT Select | 來店諮詢登記</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+
     <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: "Microsoft JhengHei", Arial, sans-serif;
-        background-color: #fcf8f2;
-      }
 
-      .wrapper {
-        width: 100%;
-        table-layout: fixed;
-        background-color: #fcf8f2;
-        padding-bottom: 40px;
-      }
+        body { 
 
-      .main {
-        background-color: #ffffff;
-        margin: 0 auto;
-        width: 100%;
-        max-width: 600px;
-        border-spacing: 0;
-        color: #5c4033;
-        border: 1px solid #d2b48c;
-      }
+            font-family: 'Noto Sans TC', sans-serif; 
 
-      .header {
-        background-color: #8b4513;
-        color: #ffffff;
-        padding: 45px 20px;
-        text-align: center;
-      }
+            background-color: #fcf9f6; /* 米白底色，比純白更有質感 */
 
-      .price-container {
-        margin: 15px 0;
-      }
-
-      .original-price {
-        font-size: 18px;
-        color: #f5deb3;
-        text-decoration: line-through;
-        margin-bottom: 5px;
-        display: block;
-      }
-
-      .sale-price {
-        font-size: 52px;
-        color: #ffcc66;
-        font-weight: bold;
-        line-height: 1;
-      }
-
-      .content {
-        padding: 30px 20px;
-        line-height: 1.8;
-      }
-
-      /* --- 按鈕通用效果設定 --- */
-      .cta-button { 
-        display: inline-block; 
-        padding: 16px 30px; 
-        background-color: #cd853f; 
-        color: #ffffff; 
-        text-decoration: none; 
-        border-radius: 5px; 
-        font-weight: bold; 
-        margin-top: 25px; 
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease, background-color 0.3s ease; 
-      }
-
-      /* Line 按鈕專屬綠色 */
-      .line-button { 
-        display: inline-block; 
-        padding: 16px 30px; 
-        background-color: #06C755; 
-        color: #ffffff; 
-        text-decoration: none; 
-        border-radius: 5px; 
-        font-weight: bold; 
-        margin-top: 25px; 
-        margin-left: 10px; /* 橫向排列時的間距 */
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease, background-color 0.3s ease; 
-      }
-
-      /* 滑鼠經過效果 */
-      .cta-button:hover {
-        transform: scale(1.05);
-        background-color: #a0522d;
-        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-      }
-
-      .line-button:hover {
-        transform: scale(1.05);
-        background-color: #05a346;
-        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-      }
-
-      .product-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 25px;
-        background-color: #fffaf5;
-      }
-
-      .product-table td {
-        padding: 12px 15px;
-        border-bottom: 1px solid #e3d5ca;
-      }
-
-      .footer {
-        padding: 25px;
-        text-align: center;
-        font-size: 13px;
-        color: #a0522d;
-        line-height: 1.5;
-      }
-
-      .highlight {
-        color: #cd853f;
-        font-weight: bold;
-      }
-
-      .badge {
-        background: #cd853f;
-        color: #fff;
-        padding: 2px 8px;
-        border-radius: 3px;
-        font-size: 12px;
-        margin-left: 5px;
-        vertical-align: middle;
-      }
-
-      .promo-box {
-        background-color: #fff9f0;
-        border: 1px dashed #cd853f;
-        border-left: 5px solid #cd853f;
-        padding: 20px;
-        margin: 25px 0;
-        color: #5c4033;
-      }
-
-      /* 手機版適配：當螢幕寬度小於 500px 時，按鈕改為垂直排列 */
-      @media only screen and (max-width: 500px) {
-        .cta-button, .line-button {
-          display: block;
-          margin-left: 0;
-          margin-right: 0;
-          margin-top: 15px;
-          text-align: center;
         }
-      }
+
+        
+
+        /* TAT 招牌橘棕色配色 */
+
+        .text-tat-orange { color: #d65622; }
+
+        .bg-tat-orange { background-color: #d65622; }
+
+        
+
+        /* 選取後的卡片樣式 */
+
+        input[type="radio"]:checked + div {
+
+            border-color: #d65622;
+
+            background-color: #fffaf8;
+
+            box-shadow: 0 10px 20px -5px rgba(214, 86, 34, 0.15);
+
+        }
+
+        input[type="radio"]:checked + div .check-icon { display: block; }
+
+        input[type="radio"]:checked + div .item-title { color: #d65622; font-weight: 700; }
+
+
+
+        .hidden-el { display: none; }
+
+        
+
+        /* 漸層按鈕 */
+
+        .btn-gradient {
+
+            background: linear-gradient(135deg, #e67e22 0%, #d65622 100%);
+
+        }
+
+
+
+        /* 輸入框陰影與圓角 */
+
+        .custom-input {
+
+            border: 1px solid #eee;
+
+            transition: all 0.3s ease;
+
+        }
+
+        .custom-input:focus {
+
+            border-color: #d65622;
+
+            ring: 2px;
+
+            ring-color: #d65622;
+
+            outline: none;
+
+        }
+
     </style>
-  </head>
 
-  <body>
-    <center class="wrapper">
-      <table class="main">
-        <tr>
-          <td class="header">
-            <p style="letter-spacing: 3px; margin: 0; font-size: 14px; opacity: 0.9;">EXCLUSIVE OFFER</p>
-            <h1 style="margin: 15px 0 10px 0; font-size: 32px; letter-spacing: 1px;">Argon TT 經典黑膠唱盤</h1>
-            <div class="price-container">
-              <span class="original-price">原價 NT$ 13,800</span>
-              <span class="sale-price">NT$ 9,900</span>
-            </div>
-            <p style="margin-top: 10px; font-size: 16px; color: #f5deb3;">全台最低下殺免萬元・限量 50 部</p>
-          </td>
-        </tr>
+</head>
 
-        <tr>
-          <td class="content">
-            <p>親愛的愛樂者：</p>
-            <p>渴望已久的類比浪漫，現在就是最完美的入手時機。我們特別為您爭取到 <strong>Argon TT 破盤專案</strong>，以震撼全台的驚喜價，讓丹麥的極致工藝走進您的客廳。</p>
+<body class="antialiased pb-20 text-gray-800">
 
-            <div class="promo-box">
-              <strong style="font-size: 18px;">🎁 來店專屬驚喜</strong><br />
-              活動期間親臨門市諮詢或選購，現場即贈 <span class="highlight">「神秘小禮物」</span> 一組。數量有限，送完即止！
+
+
+    <div class="max-w-md mx-auto px-6 py-10">
+
+        <header class="text-center mb-12">
+
+            <div class="inline-block mb-6">
+
+                <img src="https://nnr01206.github.io/TAT-customers-sources/logo.png" alt="TAT Select Logo" class="h-40 mx-auto">
+
             </div>
 
-            <h3 style="border-bottom: 2px solid #cd853f; display: inline-block; padding-bottom: 5px;">初探黑膠 | 兩萬內嚴選</h3>
-            <table class="product-table">
-              <tr>
-                <td><strong>Argon TT</strong> <span class="badge">全台最低</span></td>
-                <td align="right" class="highlight">NT$ 9,900</td>
-              </tr>
-              <tr>
-                <td><strong>Vestlyd T1</strong></td>
-                <td align="right">NT$ 18,000</td>
-              </tr>
-              <tr>
-                <td><strong>Rega Planar 1</strong></td>
-                <td align="right">NT$ 19,800</td>
-              </tr>
-            </table>
+            <h1 class="text-2xl font-bold tracking-tight">來店諮詢登記</h1>
 
-            <h3 style="margin-top: 35px; border-bottom: 2px solid #cd853f; display: inline-block; padding-bottom: 5px;">進階聽感 | 靈魂的躍升</h3>
-            <p>除了入門首選，現場同步展出中高階銘機，歡迎帶上私藏唱片，感受更高層次的音場與細節：</p>
-            <ul style="padding-left: 20px;">
-              <li><strong>Vestlyd T2</strong> - 渾厚動態之選 ($28,000)</li>
-              <li><strong>Rega P3</strong> - 經典英倫工藝 ($83,500)</li>
-              <li><strong>Rega P8</strong> - 極致旗艦體驗 ($268,000)</li>
-            </ul>
+            <div class="w-10 h-1 bg-tat-orange mx-auto mt-4 rounded-full"></div>
 
-            <p style="background-color: #fcf8f2; padding: 10px; border-radius: 4px;">
-              🔍 <strong>OUT 好物專區：</strong><br />
-              現場特設「二手/展示品」專區，多款精品設備驚喜價，等您來挖寶！
-            </p>
+        </header>
 
-            <center>
-              <a href="tel:04-2386-2252" class="cta-button">📞 致電預約試聽</a>
-              <a href="https://line.me/R/ti/p/@您的帳號ID" target="_blank" class="line-button">💬 加 LINE 預約諮詢</a>
-            </center>
-          </td>
-        </tr>
 
-        <tr>
-          <td class="footer">
-            <p>※ 優惠價格僅限量 50 部 Argon TT，售罄後將恢復原價 13,800 元。</p>
-            <hr style="border: 0; border-top: 1px solid #d2b48c; margin: 20px 0;" />
-            <p>門市資訊：台中市南屯區龍富15路111號</p>
-            <p>聯絡電話：04-2386-2252</p>
-          </td>
-        </tr>
-      </table>
-    </center>
-  </body>
+
+        <form id="surveyForm" class="space-y-12">
+
+            
+
+            <section>
+
+                <div class="flex items-baseline mb-6">
+
+                    <span class="text-tat-orange font-black italic text-2xl mr-3">01.</span>
+
+                    <h3 class="text-lg font-bold">您是如何得知我們的資訊？</h3>
+
+                </div>
+
+                <div class="grid grid-cols-1 gap-4">
+
+                    <label class="block cursor-pointer">
+
+                        <input type="radio" name="source" value="Google Maps" class="sr-only" required>
+
+                        <div class="flex items-center justify-between p-5 bg-white border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 active:scale-95">
+
+                            <span class="item-title text-gray-600 tracking-wide">📍 Google 導航 / 地圖</span>
+
+                            <div class="check-icon hidden-el text-tat-orange">
+
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
+
+                            </div>
+
+                        </div>
+
+                    </label>
+
+                    <label class="block cursor-pointer">
+
+                        <input type="radio" name="source" value="Google Search" class="sr-only">
+
+                        <div class="flex items-center justify-between p-5 bg-white border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 active:scale-95">
+
+                            <span class="item-title text-gray-600 tracking-wide">🔍 Google 關鍵字搜尋</span>
+
+                            <div class="check-icon hidden-el text-tat-orange">
+
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
+
+                            </div>
+
+                        </div>
+
+                    </label>
+
+                    <label class="block cursor-pointer">
+
+                        <input type="radio" name="source" value="Meta (FB/IG)" class="sr-only">
+
+                        <div class="flex items-center justify-between p-5 bg-white border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 active:scale-95">
+
+                            <span class="item-title text-gray-600 tracking-wide">📱 Facebook / Instagram 廣告</span>
+
+                            <div class="check-icon hidden-el text-tat-orange">
+
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
+
+                            </div>
+
+                        </div>
+
+                    </label>
+
+                    <label class="block cursor-pointer">
+
+                        <input type="radio" name="source" value="EDM" class="sr-only">
+
+                        <div class="flex items-center justify-between p-5 bg-white border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 active:scale-95">
+
+                            <span class="item-title text-gray-600 tracking-wide">📩 電子報 (EDM)</span>
+
+                            <div class="check-icon hidden-el text-tat-orange">
+
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
+
+                            </div>
+
+                        </div>
+
+                    </label>
+
+                </div>
+
+            </section>
+
+
+
+            <section>
+
+                <div class="flex items-baseline mb-6">
+
+                    <span class="text-tat-orange font-black italic text-2xl mr-3">02.</span>
+
+                    <h3 class="text-lg font-bold">您今天感興趣的產品類型？</h3>
+
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+
+                    <label class="cursor-pointer">
+
+                        <input type="radio" name="product" value="黑膠" class="sr-only" required>
+
+                        <div class="py-6 bg-white border border-gray-100 rounded-2xl text-center shadow-sm transition-all active:scale-95">
+
+                            <span class="text-[10px] text-gray-400 block mb-1 uppercase tracking-widest font-bold">Analog</span>
+
+                            <span class="item-title text-gray-700 font-medium">黑膠唱機</span>
+
+                        </div>
+
+                    </label>
+
+                    <label class="cursor-pointer">
+
+                        <input type="radio" name="product" value="藍牙喇叭" class="sr-only">
+
+                        <div class="py-6 bg-white border border-gray-100 rounded-2xl text-center shadow-sm transition-all active:scale-95">
+
+                            <span class="text-[10px] text-gray-400 block mb-1 uppercase tracking-widest font-bold">Wireless</span>
+
+                            <span class="item-title text-gray-700 font-medium">藍牙喇叭</span>
+
+                        </div>
+
+                    </label>
+
+                    <label class="cursor-pointer">
+
+                        <input type="radio" name="product" value="書架式喇叭" class="sr-only">
+
+                        <div class="py-6 bg-white border border-gray-100 rounded-2xl text-center shadow-sm transition-all active:scale-95">
+
+                            <span class="text-[10px] text-gray-400 block mb-1 uppercase tracking-widest font-bold">Bookshelf</span>
+
+                            <span class="item-title text-gray-700 font-medium">書架喇叭</span>
+
+                        </div>
+
+                    </label>
+
+                    <label class="cursor-pointer">
+
+                        <input type="radio" name="product" value="家庭劇院" class="sr-only">
+
+                        <div class="py-6 bg-white border border-gray-100 rounded-2xl text-center shadow-sm transition-all active:scale-95">
+
+                            <span class="text-[10px] text-gray-400 block mb-1 uppercase tracking-widest font-bold">Theater</span>
+
+                            <span class="item-title text-gray-700 font-medium">家庭劇院</span>
+
+                        </div>
+
+                    </label>
+
+                    <label class="cursor-pointer">
+
+                        <input type="radio" name="product" value="擴大機" class="sr-only">
+
+                        <div class="py-6 bg-white border border-gray-100 rounded-2xl text-center shadow-sm transition-all active:scale-95">
+
+                            <span class="text-[10px] text-gray-400 block mb-1 uppercase tracking-widest font-bold">Amp</span>
+
+                            <span class="item-title text-gray-700 font-medium">擴大機</span>
+
+                        </div>
+
+                    </label>
+
+                    <label class="cursor-pointer">
+
+                        <input type="radio" name="product" value="其他" class="sr-only">
+
+                        <div class="py-6 bg-white border border-gray-100 rounded-2xl text-center shadow-sm transition-all active:scale-95">
+
+                            <span class="text-[10px] text-gray-400 block mb-1 uppercase tracking-widest font-bold">Others</span>
+
+                            <span class="item-title text-gray-700 font-medium">其他諮詢</span>
+
+                        </div>
+
+                    </label>
+
+                </div>
+
+                
+
+                <div id="other-box" class="mt-4 hidden-el">
+
+                    <textarea id="other_text" rows="2" placeholder="請輸入您想找的商品或需求..." class="w-full p-4 rounded-2xl bg-white custom-input shadow-inner text-sm"></textarea>
+
+                </div>
+
+            </section>
+
+
+
+            <div class="pt-8">
+
+                <button type="submit" id="submitBtn" class="w-full btn-gradient text-white text-lg font-bold py-5 rounded-2xl shadow-xl hover:opacity-90 active:scale-[0.97] transition-all tracking-[0.2em]">
+
+                    SUBMIT 提交
+
+                </button>
+
+            </div>
+
+        </form>
+
+
+
+        <div id="successMsg" class="hidden-el text-center py-16">
+    <div class="mb-8 inline-block p-6 rounded-full bg-orange-50 text-tat-orange">
+        <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+        </svg>
+    </div>
+
+    <h2 class="text-3xl font-black text-gray-800 mb-4 tracking-tighter">THANK YOU!</h2>
+    <p class="text-gray-500 leading-relaxed px-4 mb-10">
+        我們已收到您的諮詢資訊。<br>現場專員將竭誠為您服務。
+    </p>
+
+    <div class="px-4">
+        <div class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm">
+            <p class="text-sm font-bold text-gray-700 mb-4">喜歡 TAT Select 的環境與服務嗎？</p>
+            
+            <a href="https://g.page/r/CTb54-606heIEBM/review" target="_blank" 
+               class="inline-block w-full border-2 border-tat-orange text-tat-orange font-bold py-4 rounded-2xl active:scale-[0.97] transition-all flex items-center justify-center gap-2">
+                <span>🌟</span> 留下五星好評，給我們鼓勵
+            </a>
+            
+            <p class="text-[10px] text-gray-400 mt-3 italic">您的評論是我們提供更好服務的動力</p>
+        </div>
+    </div>
+
+    <button onclick="location.reload()" class="mt-12 text-gray-400 text-xs border-b border-gray-300 tracking-widest uppercase">
+        Restart 重新填寫
+    </button>
+</div>
+
+
+
+        <footer class="mt-20 text-center text-gray-300 text-[10px] tracking-[0.3em] uppercase">
+
+            &copy; TAT Select Audio Lifestyle.
+
+        </footer>
+
+    </div>
+
+
+
+    <script>
+
+        // --- 核心設定區 ---
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxcbA1ZLsRlWaG4C0MfT2ZxnRUV8tE-oa4HCTwyNJT9QuGd8faQTZO5xuRKvOOCgIKcdA/exec';
+
+        // ----------------
+
+
+
+        const form = document.getElementById('surveyForm');
+
+        const btn = document.getElementById('submitBtn');
+
+        const otherBox = document.getElementById('other-box');
+
+        const productRadios = document.querySelectorAll('input[name="product"]');
+
+
+
+        // 控制「其他」輸入框顯示
+
+        productRadios.forEach(r => {
+
+            r.addEventListener('change', () => {
+
+                otherBox.classList.toggle('hidden-el', r.value !== '其他');
+
+            });
+
+        });
+
+
+
+        // 提交表單
+
+        form.addEventListener('submit', e => {
+
+            e.preventDefault();
+
+            btn.disabled = true;
+
+            btn.innerText = 'SENDING...';
+
+
+
+            const source = document.querySelector('input[name="source"]:checked').value;
+
+            const product = document.querySelector('input[name="product"]:checked').value;
+
+            const finalProduct = (product === '其他') ? document.getElementById('other_text').value : product;
+
+
+
+            // 使用 JSON 格式傳送
+
+            fetch(scriptURL, { 
+
+                method: 'POST', 
+
+                mode: 'no-cors', 
+
+                cache: 'no-cache',
+
+                headers: { 'Content-Type': 'application/json' },
+
+                body: JSON.stringify({ 
+
+                    source: source, 
+
+                    product: finalProduct,
+
+                    note: "" 
+
+                }) 
+
+            })
+
+            .then(() => {
+
+                form.classList.add('hidden-el');
+
+                document.getElementById('successMsg').classList.remove('hidden-el');
+
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            })
+
+            .catch(err => {
+
+                console.error(err);
+
+                alert('抱歉，傳送失敗，請檢查網路連線後再試一次。');
+
+                btn.disabled = false;
+
+                btn.innerText = 'SUBMIT 提交';
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
 </html>
