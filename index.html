@@ -4,91 +4,91 @@
 
 <head>
 
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>TAT Select | 來店諮詢登記</title>
+    <title>TAT Select | 來店諮詢登記</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
 
-    <style>
+    <style>
 
-        body { 
+        body { 
 
-            font-family: 'Noto Sans TC', sans-serif; 
+            font-family: 'Noto Sans TC', sans-serif; 
 
-            background-color: #fcf9f6; /* 米白底色，比純白更有質感 */
+            background-color: #fcf9f6; /* 米白底色，比純白更有質感 */
 
-        }
+        }
 
-        
+        
 
-        /* TAT 招牌橘棕色配色 */
+        /* TAT 招牌橘棕色配色 */
 
-        .text-tat-orange { color: #d65622; }
+        .text-tat-orange { color: #d65622; }
 
-        .bg-tat-orange { background-color: #d65622; }
+        .bg-tat-orange { background-color: #d65622; }
 
-        
+        
 
-        /* 選取後的卡片樣式 */
+        /* 選取後的卡片樣式 */
 
-        input[type="radio"]:checked + div {
+        input[type="radio"]:checked + div {
 
-            border-color: #d65622;
+            border-color: #d65622;
 
-            background-color: #fffaf8;
+            background-color: #fffaf8;
 
-            box-shadow: 0 10px 20px -5px rgba(214, 86, 34, 0.15);
+            box-shadow: 0 10px 20px -5px rgba(214, 86, 34, 0.15);
 
-        }
+        }
 
-        input[type="radio"]:checked + div .check-icon { display: block; }
+        input[type="radio"]:checked + div .check-icon { display: block; }
 
-        input[type="radio"]:checked + div .item-title { color: #d65622; font-weight: 700; }
-
-
-
-        .hidden-el { display: none; }
-
-        
-
-        /* 漸層按鈕 */
-
-        .btn-gradient {
-
-            background: linear-gradient(135deg, #e67e22 0%, #d65622 100%);
-
-        }
+        input[type="radio"]:checked + div .item-title { color: #d65622; font-weight: 700; }
 
 
 
-        /* 輸入框陰影與圓角 */
+        .hidden-el { display: none; }
 
-        .custom-input {
+        
 
-            border: 1px solid #eee;
+        /* 漸層按鈕 */
 
-            transition: all 0.3s ease;
+        .btn-gradient {
 
-        }
+            background: linear-gradient(135deg, #e67e22 0%, #d65622 100%);
 
-        .custom-input:focus {
+        }
 
-            border-color: #d65622;
 
-            ring: 2px;
 
-            ring-color: #d65622;
+        /* 輸入框陰影與圓角 */
 
-            outline: none;
+        .custom-input {
 
-        }
+            border: 1px solid #eee;
 
-    </style>
+            transition: all 0.3s ease;
+
+        }
+
+        .custom-input:focus {
+
+            border-color: #d65622;
+
+            ring: 2px;
+
+            ring-color: #d65622;
+
+            outline: none;
+
+        }
+
+    </style>
 
 </head>
 
@@ -96,243 +96,243 @@
 
 
 
-    <div class="max-w-md mx-auto px-6 py-10">
+    <div class="max-w-md mx-auto px-6 py-10">
 
-        <header class="text-center mb-12">
+        <header class="text-center mb-12">
 
-            <div class="inline-block mb-6">
+            <div class="inline-block mb-6">
 
-                <img src="https://nnr01206.github.io/TAT-customers-sources/logo.png" alt="TAT Select Logo" class="h-40 mx-auto">
+                <img src="https://nnr01206.github.io/TAT-customers-sources/logo.png" alt="TAT Select Logo" class="h-40 mx-auto">
 
-            </div>
+            </div>
 
-            <h1 class="text-2xl font-bold tracking-tight">來店諮詢登記</h1>
+            <h1 class="text-2xl font-bold tracking-tight">來店諮詢登記</h1>
 
-            <div class="w-10 h-1 bg-tat-orange mx-auto mt-4 rounded-full"></div>
+            <div class="w-10 h-1 bg-tat-orange mx-auto mt-4 rounded-full"></div>
 
-        </header>
+        </header>
 
 
 
-        <form id="surveyForm" class="space-y-12">
+        <form id="surveyForm" class="space-y-12">
 
-            
+            
 
-            <section>
+            <section>
 
-                <div class="flex items-baseline mb-6">
+                <div class="flex items-baseline mb-6">
 
-                    <span class="text-tat-orange font-black italic text-2xl mr-3">01.</span>
+                    <span class="text-tat-orange font-black italic text-2xl mr-3">01.</span>
 
-                    <h3 class="text-lg font-bold">您是如何得知我們的資訊？</h3>
+                    <h3 class="text-lg font-bold">您是如何得知我們的資訊？</h3>
 
-                </div>
+                </div>
 
-                <div class="grid grid-cols-1 gap-4">
+                <div class="grid grid-cols-1 gap-4">
 
-                    <label class="block cursor-pointer">
+                    <label class="block cursor-pointer">
 
-                        <input type="radio" name="source" value="Google Maps" class="sr-only" required>
+                        <input type="radio" name="source" value="Google Maps" class="sr-only" required>
 
-                        <div class="flex items-center justify-between p-5 bg-white border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 active:scale-95">
+                        <div class="flex items-center justify-between p-5 bg-white border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 active:scale-95">
 
-                            <span class="item-title text-gray-600 tracking-wide">📍 Google 導航 / 地圖</span>
+                            <span class="item-title text-gray-600 tracking-wide">📍 Google 導航 / 地圖</span>
 
-                            <div class="check-icon hidden-el text-tat-orange">
+                            <div class="check-icon hidden-el text-tat-orange">
 
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
 
-                            </div>
+                            </div>
 
-                        </div>
+                        </div>
 
-                    </label>
+                    </label>
 
-                    <label class="block cursor-pointer">
+                    <label class="block cursor-pointer">
 
-                        <input type="radio" name="source" value="Google Search" class="sr-only">
+                        <input type="radio" name="source" value="Google Search" class="sr-only">
 
-                        <div class="flex items-center justify-between p-5 bg-white border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 active:scale-95">
+                        <div class="flex items-center justify-between p-5 bg-white border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 active:scale-95">
 
-                            <span class="item-title text-gray-600 tracking-wide">🔍 Google 關鍵字搜尋</span>
+                            <span class="item-title text-gray-600 tracking-wide">🔍 Google 關鍵字搜尋</span>
 
-                            <div class="check-icon hidden-el text-tat-orange">
+                            <div class="check-icon hidden-el text-tat-orange">
 
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
 
-                            </div>
+                            </div>
 
-                        </div>
+                        </div>
 
-                    </label>
+                    </label>
 
-                    <label class="block cursor-pointer">
+                    <label class="block cursor-pointer">
 
-                        <input type="radio" name="source" value="Meta (FB/IG)" class="sr-only">
+                        <input type="radio" name="source" value="Meta (FB/IG)" class="sr-only">
 
-                        <div class="flex items-center justify-between p-5 bg-white border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 active:scale-95">
+                        <div class="flex items-center justify-between p-5 bg-white border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 active:scale-95">
 
-                            <span class="item-title text-gray-600 tracking-wide">📱 Facebook / Instagram 廣告</span>
+                            <span class="item-title text-gray-600 tracking-wide">📱 Facebook / Instagram 廣告</span>
 
-                            <div class="check-icon hidden-el text-tat-orange">
+                            <div class="check-icon hidden-el text-tat-orange">
 
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
 
-                            </div>
+                            </div>
 
-                        </div>
+                        </div>
 
-                    </label>
+                    </label>
 
-                    <label class="block cursor-pointer">
+                    <label class="block cursor-pointer">
 
-                        <input type="radio" name="source" value="EDM" class="sr-only">
+                        <input type="radio" name="source" value="EDM" class="sr-only">
 
-                        <div class="flex items-center justify-between p-5 bg-white border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 active:scale-95">
+                        <div class="flex items-center justify-between p-5 bg-white border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 active:scale-95">
 
-                            <span class="item-title text-gray-600 tracking-wide">📩 電子報 (EDM)</span>
+                            <span class="item-title text-gray-600 tracking-wide">📩 電子報 (EDM)</span>
 
-                            <div class="check-icon hidden-el text-tat-orange">
+                            <div class="check-icon hidden-el text-tat-orange">
 
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
 
-                            </div>
+                            </div>
 
-                        </div>
+                        </div>
 
-                    </label>
+                    </label>
 
-                </div>
+                </div>
 
-            </section>
+            </section>
 
 
 
-            <section>
+            <section>
 
-                <div class="flex items-baseline mb-6">
+                <div class="flex items-baseline mb-6">
 
-                    <span class="text-tat-orange font-black italic text-2xl mr-3">02.</span>
+                    <span class="text-tat-orange font-black italic text-2xl mr-3">02.</span>
 
-                    <h3 class="text-lg font-bold">您今天感興趣的產品類型？</h3>
+                    <h3 class="text-lg font-bold">您今天感興趣的產品類型？</h3>
 
-                </div>
+                </div>
 
-                <div class="grid grid-cols-2 gap-3">
+                <div class="grid grid-cols-2 gap-3">
 
-                    <label class="cursor-pointer">
+                    <label class="cursor-pointer">
 
-                        <input type="radio" name="product" value="黑膠" class="sr-only" required>
+                        <input type="radio" name="product" value="黑膠" class="sr-only" required>
 
-                        <div class="py-6 bg-white border border-gray-100 rounded-2xl text-center shadow-sm transition-all active:scale-95">
+                        <div class="py-6 bg-white border border-gray-100 rounded-2xl text-center shadow-sm transition-all active:scale-95">
 
-                            <span class="text-[10px] text-gray-400 block mb-1 uppercase tracking-widest font-bold">Analog</span>
+                            <span class="text-[10px] text-gray-400 block mb-1 uppercase tracking-widest font-bold">Analog</span>
 
-                            <span class="item-title text-gray-700 font-medium">黑膠唱機</span>
+                            <span class="item-title text-gray-700 font-medium">黑膠唱機</span>
 
-                        </div>
+                        </div>
 
-                    </label>
+                    </label>
 
-                    <label class="cursor-pointer">
+                    <label class="cursor-pointer">
 
-                        <input type="radio" name="product" value="藍牙喇叭" class="sr-only">
+                        <input type="radio" name="product" value="藍牙喇叭" class="sr-only">
 
-                        <div class="py-6 bg-white border border-gray-100 rounded-2xl text-center shadow-sm transition-all active:scale-95">
+                        <div class="py-6 bg-white border border-gray-100 rounded-2xl text-center shadow-sm transition-all active:scale-95">
 
-                            <span class="text-[10px] text-gray-400 block mb-1 uppercase tracking-widest font-bold">Wireless</span>
+                            <span class="text-[10px] text-gray-400 block mb-1 uppercase tracking-widest font-bold">Wireless</span>
 
-                            <span class="item-title text-gray-700 font-medium">藍牙喇叭</span>
+                            <span class="item-title text-gray-700 font-medium">藍牙喇叭</span>
 
-                        </div>
+                        </div>
 
-                    </label>
+                    </label>
 
-                    <label class="cursor-pointer">
+                    <label class="cursor-pointer">
 
-                        <input type="radio" name="product" value="書架式喇叭" class="sr-only">
+                        <input type="radio" name="product" value="書架式喇叭" class="sr-only">
 
-                        <div class="py-6 bg-white border border-gray-100 rounded-2xl text-center shadow-sm transition-all active:scale-95">
+                        <div class="py-6 bg-white border border-gray-100 rounded-2xl text-center shadow-sm transition-all active:scale-95">
 
-                            <span class="text-[10px] text-gray-400 block mb-1 uppercase tracking-widest font-bold">Bookshelf</span>
+                            <span class="text-[10px] text-gray-400 block mb-1 uppercase tracking-widest font-bold">Bookshelf</span>
 
-                            <span class="item-title text-gray-700 font-medium">書架喇叭</span>
+                            <span class="item-title text-gray-700 font-medium">書架喇叭</span>
 
-                        </div>
+                        </div>
 
-                    </label>
+                    </label>
 
-                    <label class="cursor-pointer">
+                    <label class="cursor-pointer">
 
-                        <input type="radio" name="product" value="家庭劇院" class="sr-only">
+                        <input type="radio" name="product" value="家庭劇院" class="sr-only">
 
-                        <div class="py-6 bg-white border border-gray-100 rounded-2xl text-center shadow-sm transition-all active:scale-95">
+                        <div class="py-6 bg-white border border-gray-100 rounded-2xl text-center shadow-sm transition-all active:scale-95">
 
-                            <span class="text-[10px] text-gray-400 block mb-1 uppercase tracking-widest font-bold">Theater</span>
+                            <span class="text-[10px] text-gray-400 block mb-1 uppercase tracking-widest font-bold">Theater</span>
 
-                            <span class="item-title text-gray-700 font-medium">家庭劇院</span>
+                            <span class="item-title text-gray-700 font-medium">家庭劇院</span>
 
-                        </div>
+                        </div>
 
-                    </label>
+                    </label>
 
-                    <label class="cursor-pointer">
+                    <label class="cursor-pointer">
 
-                        <input type="radio" name="product" value="擴大機" class="sr-only">
+                        <input type="radio" name="product" value="擴大機" class="sr-only">
 
-                        <div class="py-6 bg-white border border-gray-100 rounded-2xl text-center shadow-sm transition-all active:scale-95">
+                        <div class="py-6 bg-white border border-gray-100 rounded-2xl text-center shadow-sm transition-all active:scale-95">
 
-                            <span class="text-[10px] text-gray-400 block mb-1 uppercase tracking-widest font-bold">Amp</span>
+                            <span class="text-[10px] text-gray-400 block mb-1 uppercase tracking-widest font-bold">Amp</span>
 
-                            <span class="item-title text-gray-700 font-medium">擴大機</span>
+                            <span class="item-title text-gray-700 font-medium">擴大機</span>
 
-                        </div>
+                        </div>
 
-                    </label>
+                    </label>
 
-                    <label class="cursor-pointer">
+                    <label class="cursor-pointer">
 
-                        <input type="radio" name="product" value="其他" class="sr-only">
+                        <input type="radio" name="product" value="其他" class="sr-only">
 
-                        <div class="py-6 bg-white border border-gray-100 rounded-2xl text-center shadow-sm transition-all active:scale-95">
+                        <div class="py-6 bg-white border border-gray-100 rounded-2xl text-center shadow-sm transition-all active:scale-95">
 
-                            <span class="text-[10px] text-gray-400 block mb-1 uppercase tracking-widest font-bold">Others</span>
+                            <span class="text-[10px] text-gray-400 block mb-1 uppercase tracking-widest font-bold">Others</span>
 
-                            <span class="item-title text-gray-700 font-medium">其他諮詢</span>
+                            <span class="item-title text-gray-700 font-medium">其他諮詢</span>
 
-                        </div>
+                        </div>
 
-                    </label>
+                    </label>
 
-                </div>
+                </div>
 
-                
+                
 
-                <div id="other-box" class="mt-4 hidden-el">
+                <div id="other-box" class="mt-4 hidden-el">
 
-                    <textarea id="other_text" rows="2" placeholder="請輸入您想找的商品或需求..." class="w-full p-4 rounded-2xl bg-white custom-input shadow-inner text-sm"></textarea>
+                    <textarea id="other_text" rows="2" placeholder="請輸入您想找的商品或需求..." class="w-full p-4 rounded-2xl bg-white custom-input shadow-inner text-sm"></textarea>
 
-                </div>
+                </div>
 
-            </section>
+            </section>
 
 
 
-            <div class="pt-8">
+            <div class="pt-8">
 
-                <button type="submit" id="submitBtn" class="w-full btn-gradient text-white text-lg font-bold py-5 rounded-2xl shadow-xl hover:opacity-90 active:scale-[0.97] transition-all tracking-[0.2em]">
+                <button type="submit" id="submitBtn" class="w-full btn-gradient text-white text-lg font-bold py-5 rounded-2xl shadow-xl hover:opacity-90 active:scale-[0.97] transition-all tracking-[0.2em]">
 
-                    SUBMIT 提交
+                    SUBMIT 提交
 
-                </button>
+                </button>
 
-            </div>
+            </div>
 
-        </form>
+        </form>
 
 
 
-<div id="successMsg" class="hidden-el text-center py-16">
+       <div id="successMsg" class="hidden-el text-center py-16">
     <div class="mb-8 inline-block p-6 rounded-full bg-orange-50 text-tat-orange">
         <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
@@ -357,7 +357,7 @@
 
     <div class="px-4">
         <div class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm">
-            <p class="text-sm font-bold text-gray-700 mb-4">喜歡台音的環境與服務嗎？</p>
+            <p class="text-sm font-bold text-gray-700 mb-4">喜歡 TAT Select 的環境與服務嗎？</p>
             
             <a href="https://g.page/r/CTb54-606heIEBM/review" target="_blank" 
                class="inline-block w-full border-2 border-tat-orange text-tat-orange font-bold py-4 rounded-2xl active:scale-[0.97] transition-all flex items-center justify-center gap-2">
@@ -375,119 +375,119 @@
 
 
 
-        <footer class="mt-20 text-center text-gray-300 text-[10px] tracking-[0.3em] uppercase">
+        <footer class="mt-20 text-center text-gray-300 text-[10px] tracking-[0.3em] uppercase">
 
-            &copy; TAT Select Audio Lifestyle.
+            &copy; TAT Select Audio Lifestyle.
 
-        </footer>
+        </footer>
 
-    </div>
-
-
-
-    <script>
-
-        // --- 核心設定區 ---
-
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxcbA1ZLsRlWaG4C0MfT2ZxnRUV8tE-oa4HCTwyNJT9QuGd8faQTZO5xuRKvOOCgIKcdA/exec';
-
-        // ----------------
+    </div>
 
 
 
-        const form = document.getElementById('surveyForm');
+    <script>
 
-        const btn = document.getElementById('submitBtn');
+        // --- 核心設定區 ---
 
-        const otherBox = document.getElementById('other-box');
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxcbA1ZLsRlWaG4C0MfT2ZxnRUV8tE-oa4HCTwyNJT9QuGd8faQTZO5xuRKvOOCgIKcdA/exec';
 
-        const productRadios = document.querySelectorAll('input[name="product"]');
-
-
-
-        // 控制「其他」輸入框顯示
-
-        productRadios.forEach(r => {
-
-            r.addEventListener('change', () => {
-
-                otherBox.classList.toggle('hidden-el', r.value !== '其他');
-
-            });
-
-        });
+        // ----------------
 
 
 
-        // 提交表單
+        const form = document.getElementById('surveyForm');
 
-        form.addEventListener('submit', e => {
+        const btn = document.getElementById('submitBtn');
 
-            e.preventDefault();
+        const otherBox = document.getElementById('other-box');
 
-            btn.disabled = true;
-
-            btn.innerText = 'SENDING...';
+        const productRadios = document.querySelectorAll('input[name="product"]');
 
 
 
-            const source = document.querySelector('input[name="source"]:checked').value;
+        // 控制「其他」輸入框顯示
 
-            const product = document.querySelector('input[name="product"]:checked').value;
+        productRadios.forEach(r => {
 
-            const finalProduct = (product === '其他') ? document.getElementById('other_text').value : product;
+            r.addEventListener('change', () => {
+
+                otherBox.classList.toggle('hidden-el', r.value !== '其他');
+
+            });
+
+        });
 
 
 
-            // 使用 JSON 格式傳送
+        // 提交表單
 
-            fetch(scriptURL, { 
+        form.addEventListener('submit', e => {
 
-                method: 'POST', 
+            e.preventDefault();
 
-                mode: 'no-cors', 
+            btn.disabled = true;
 
-                cache: 'no-cache',
+            btn.innerText = 'SENDING...';
 
-                headers: { 'Content-Type': 'application/json' },
 
-                body: JSON.stringify({ 
 
-                    source: source, 
+            const source = document.querySelector('input[name="source"]:checked').value;
 
-                    product: finalProduct,
+            const product = document.querySelector('input[name="product"]:checked').value;
 
-                    note: "" 
+            const finalProduct = (product === '其他') ? document.getElementById('other_text').value : product;
 
-                }) 
 
-            })
 
-            .then(() => {
+            // 使用 JSON 格式傳送
 
-                form.classList.add('hidden-el');
+            fetch(scriptURL, { 
 
-                document.getElementById('successMsg').classList.remove('hidden-el');
+                method: 'POST', 
 
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                mode: 'no-cors', 
 
-            })
+                cache: 'no-cache',
 
-            .catch(err => {
+                headers: { 'Content-Type': 'application/json' },
 
-                console.error(err);
+                body: JSON.stringify({ 
 
-                alert('抱歉，傳送失敗，請檢查網路連線後再試一次。');
+                    source: source, 
 
-                btn.disabled = false;
+                    product: finalProduct,
 
-                btn.innerText = 'SUBMIT 提交';
+                    note: "" 
 
-            });
+                }) 
 
-        });
+            })
 
-    </script>
+            .then(() => {
+
+                form.classList.add('hidden-el');
+
+                document.getElementById('successMsg').classList.remove('hidden-el');
+
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            })
+
+            .catch(err => {
+
+                console.error(err);
+
+                alert('抱歉，傳送失敗，請檢查網路連線後再試一次。');
+
+                btn.disabled = false;
+
+                btn.innerText = 'SUBMIT 提交';
+
+            });
+
+        });
+
+    </script>
 
 </body>
 
